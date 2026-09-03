@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ahmed Khaled — Fullstack Developer specializing in web applications, desktop software, and modern tech solutions. Building premium digital experiences." />
+  <meta property="og:title" content="Ahmed Khaled — Fullstack Developer" />
+  <meta property="og:description" content="Premium fullstack developer — web, desktop, and system solutions that push the boundaries of technology." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#050508" />
+  <title>Ahmed Khaled — Fullstack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════ SMART CURSOR ══════════════════ -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+  <div id="cursor-label"></div>
+
+  <!-- ══════════════════ NAVBAR ══════════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation" dir="ltr">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-logo" aria-label="Ahmed Khaled home">
+          <img src="assets/Picsart_25-03-30_03-19-04-077.png" alt="AK Logo" />
+          <span class="nav-logo-text"><span>4TECH</span></span>
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="#about" data-section="about" data-i18n="nav.about">About</a></li>
+          <li><a href="#skills" data-section="skills" data-i18n="nav.skills">Skills</a></li>
+          <li><a href="#projects" data-section="projects" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="#services" data-section="services" data-i18n="nav.services">Services</a></li>
+          <li><a href="#contact" class="nav-cta" data-section="contact" data-i18n="nav.contact">Let's Talk</a></li>
+        </ul>
+        <div class="nav-lang-switcher">
+          <button class="lang-btn" id="lang-btn" aria-label="Switch Language">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path><path d="M2 12h20"></path></svg>
+            <span id="current-lang">EN</span>
+          </button>
+          <div class="lang-dropdown" id="lang-dropdown">
+            <button data-lang="en">English</button>
+            <button data-lang="ar">العربية</button>
+            <button data-lang="fr">Français</button>
+          </div>
+        </div>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="nav-mobile" id="mobile-nav" role="dialog" aria-label="Mobile navigation">
+    <button class="nav-close" id="nav-close" aria-label="Close menu">✕</button>
+    <a href="#about" data-i18n="nav.about">About</a>
+    <a href="#skills" data-i18n="nav.skills">Skills</a>
+    <a href="#projects" data-i18n="nav.projects">Projects</a>
+    <a href="#services" data-i18n="nav.services">Services</a>
+    <a href="#contact" data-i18n="nav.contact">Let's Talk</a>
+  </div>
+
+  <!-- ══════════════════ HERO ══════════════════ -->
+  <section id="hero" aria-label="Hero" dir="ltr">
+
+    <!-- Branding video — full bleed background -->
+    <video id="hero-video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+      <source src="assets/aa.mp4" type="video/mp4" />
+    </video>
+
+    <!-- Overlays: vignette, chromatic edge -->
+    <div id="hero-vignette" aria-hidden="true"></div>
+    <div id="hero-color-edge" aria-hidden="true"></div>
+
+    <div class="container">
+      <div class="hero-content">
+
+        <div class="hero-role hero-animate">
+          <span class="hero-role-line"></span>
+          <span class="hero-role-text" data-i18n="hero.role">Fullstack Developer &amp; Engineer</span>
+        </div>
+
+        <h1 class="hero-name hero-animate">Ahmed</h1>
+        <p class="hero-surname hero-animate">Khaled</p>
+
+        <div class="hero-typewriter hero-animate">
+          <span id="hero-typewriter-text"></span><span class="cursor-blink"></span>
+        </div>
+
+        <div class="hero-cta hero-animate">
+          <a href="#projects" class="btn btn-primary" id="hero-view-work">
+            <span data-i18n="hero.view_work">View My Work</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-secondary" id="hero-contact" data-i18n="hero.contact">
+            Let's Talk
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator" aria-hidden="true">
+      <span data-i18n="hero.scroll">Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ══════════════════ ABOUT ══════════════════ -->
+  <section id="about" class="section" aria-label="About Ahmed Khaled">
+    <div class="container">
+      <div class="about-grid">
+
+        <div class="about-logo-card reveal">
+          <img src="assets/Picsart_25-03-30_03-19-04-077.png" alt="Ahmed Khaled" />
+        </div>
+
+        <div class="about-text">
+          <p class="section-label" data-i18n="about.label">About Me</p>
+          <h2 class="section-title reveal" data-i18n="about.title">
+            Crafting <span class="gradient-text">Digital Experiences</span><br/>that Define the Future
+          </h2>
+          <p class="about-bio reveal" data-i18n="about.bio">
+            I'm <strong>Ahmed Khaled</strong>, a passionate Fullstack Developer who builds high-performance
+            web applications, desktop software, and complex systems. From stunning e-commerce storefronts
+            for fashion brands to powerful offline-first desktop apps — I engineer solutions that are fast,
+            elegant, and built to scale. Every pixel, every function, every line of code is crafted with
+            precision and purpose.
+          </p>
+
+          <div class="stats-grid">
+            <div class="stat-card reveal reveal-delay-1">
+              <span class="stat-number" data-count="9" data-suffix="+">0+</span>
+              <span class="stat-label" data-i18n="about.stat1">Projects Shipped</span>
+            </div>
+            <div class="stat-card reveal reveal-delay-2">
+              <span class="stat-number" data-count="7" data-suffix="">0</span>
+              <span class="stat-label" data-i18n="about.stat2">Desktop Apps</span>
+            </div>
+            <div class="stat-card reveal reveal-delay-3">
+              <span class="stat-number" data-count="15" data-suffix="+">0+</span>
+              <span class="stat-label" data-i18n="about.stat3">Technologies</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ══════════════════ SKILLS ══════════════════ -->
+  <section id="skills" class="section" aria-label="Skills and Technologies">
+    <div class="container">
+      <div class="skills-header">
+        <p class="section-label reveal" style="justify-content:center" data-i18n="skills.label">Tech Stack</p>
+        <h2 class="section-title reveal" data-i18n="skills.title">
+          Every Tool. <span class="gradient-text">Every Layer.</span>
+        </h2>
+        <p class="section-subtitle reveal" data-i18n="skills.subtitle">
+          From pixel-perfect frontends to robust backends and native desktop apps —
+          I speak the full language of modern software.
+        </p>
+      </div>
+
+      <div class="skills-categories">
+
+        <!-- ── Frontend ── -->
+        <div class="skill-category flip-card reveal reveal-delay-1">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <span class="skill-category-icon">⚡</span>
+              <div class="skill-category-name" data-i18n="skills.frontend">Frontend</div>
+              <div class="skill-category-items">HTML · CSS · JavaScript · TypeScript · React · Vite · Bootstrap · MUI · Tailwind</div>
+              <span class="flip-hint" data-i18n="skills.explore">↻ click to explore</span>
+            </div>
+            <div class="flip-back">
+              <div class="flip-back-title"><span>⚡</span> Frontend</div>
+              <div class="flip-tech-grid">
+                <div class="flip-tech"><span class="flip-dot" style="--dc:#e34c26"></span><img src="https://cdn.simpleicons.org/html5" alt="HTML5"><span>HTML5</span></div>
+                <div class="flip-tech"><span class="flip-dot" style="--dc:#264de4"></span><img src="https://cdn.simpleicons.org/css" alt="CSS3"><span>CSS3</span></div>
+                <div class="flip-tech"><span class="flip-dot" style="--dc:#f7df1e"></span><img src="https://cdn.simpleicons.org/javascript" alt="JavaScript"><span>JavaScript</span></div>
+                <div class="flip-tech"><span class="flip-dot" style="--dc:#3178C6"></span><img src="https://cdn.simpleicons.org/typescript" alt="TypeScript"><span>TypeScript</span></div>
+                <div class="flip-tech"><span class="flip-dot" style="--dc:#61dafb"></span><img src="https://cdn.simpleicons.org/react" alt="React"><span>React</span></div>
+                <div class="flip-tech"><span class="flip-dot" style="--dc:#646cff"></span><img src="https://cdn.simpleicons.org/vite" alt="Vite"><span>Vite</span></div>
+                <div class="flip-tech"><span class="flip-dot" style="--dc:#7952b3"></span><img src="https://cdn.simpleicons.org/bootstrap" alt="Bootstrap"><span>Bootstrap</span></div>
+                <div class="flip-tech"><span class="flip-dot" style="--dc:#007fff"></span><img src="https://cdn.simpleicons.org/mui" alt="MUI"><span>MUI</span></div>
+                <div class="flip-tech"><span class="flip-dot" style="--dc:#06b6d4"></span><img src="https://cdn.simpleicons.org/tailwindcss" alt="Tailwind"><span>Tailwind</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Backend ── -->
+        <div class="skill-category flip-card reveal reveal-delay-2">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <span class="skill-category-icon">🛠</span>
+              <div class="skill-category-name" data-i18n="skills.backend">Backend</div>
+              <div class="skill-category-items">PHP · Laravel · Node.js · REST APIs · WordPress · Shopify</div>
+              <span class="flip-hint" data-i18n="skills.explore">↻ click to explore</span>
+            </div>
+            <div class="flip-back">
+              <div class="flip-back-title"><span>🛠</span> Backend</div>
+              <div class="flip-tech-grid">
+                <div class="flip-tech"><span class="flip-dot" style="--dc:#777bb4"></span><img src="https://cdn.simpleicons.org/php" alt="PHP"><span>PHP</span></div>
+                <div class="flip-tech"><span class="flip-dot" style="--dc:#ff2d20"></span><img src="https://cdn.simpleicons.org/laravel" alt="Laravel"><span>Laravel</span></div>
+                <div class="flip-tech"><span class="flip-dot" style="--dc:#339933"></span><img src="https://cdn.simpleicons.org/nodedotjs" alt="Node.js"><span>Node.js</span></div>
+                <div class="flip-tech"><span class="flip-dot" style="--dc:#4FC3F7"></span><img src="https://cdn.simpleicons.org/postman" alt="REST API"><span>REST API</span></div>
+                <div class="flip-tech"><span class="flip-dot" style="--dc:#21759b"></span><img src="https://cdn.simpleicons.org/wordpress" alt="WordPress"><span>WordPress</span></div>
+                <div class="flip-tech"><span class="flip-dot" style="--dc:#96bf48"></span><img src="https://cdn.simpleicons.org/shopify" alt="Shopify"><span>Shopify</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Desktop ── -->
+        <div class="skill-category flip-card reveal reveal-delay-3">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <span class="skill-category-icon">🖥</span>
+              <div class="skill-category-name" data-i18n="skills.desktop">Desktop</div>
+              <div class="skill-category-items">Electron.js · TypeScript · Online Apps · Offline Apps · Cross-Platform</div>
+              <span class="flip-hint" data-i18n="skills.explore">↻ click to explore</span>
+            </div>
+            <div class="flip-back">
+              <div class="flip-back-title"><span>🖥</span> Desktop</div>
+              <div class="flip-tech-grid">
+                <div class="flip-tech"><span class="flip-dot" style="--dc:#9feaf9"></span><img src="https://cdn.simpleicons.org/electron" alt="Electron"><span>Electron</span></div>
+                <div class="flip-tech"><span class="flip-dot" style="--dc:#f7df1e"></span><img src="https://cdn.simpleicons.org/javascript" alt="JavaScript"><span>JavaScript</span></div>
+                <div class="flip-tech"><span class="flip-dot" style="--dc:#3178C6"></span><img src="https://cdn.simpleicons.org/typescript" alt="TypeScript"><span>TypeScript</span></div>
+                <div class="flip-tech"><span class="flip-dot" style="--dc:#61dafb"></span><img src="https://cdn.simpleicons.org/react" alt="React"><span>React</span></div>
+                <div class="flip-tech"><span class="flip-dot" style="--dc:#646cff"></span><img src="https://cdn.simpleicons.org/vite" alt="Vite"><span>Vite</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Database ── -->
+        <div class="skill-category flip-card reveal reveal-delay-4">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <span class="skill-category-icon">🗄</span>
+              <div class="skill-category-name" data-i18n="skills.database">Database</div>
+              <div class="skill-category-items">MySQL · SQLite · Supabase · Database Design · Optimization</div>
+              <span class="flip-hint" data-i18n="skills.explore">↻ click to explore</span>
+            </div>
+            <div class="flip-back">
+              <div class="flip-back-title"><span>🗄</span> Database</div>
+              <div class="flip-tech-grid">
+                <div class="flip-tech"><span class="flip-dot" style="--dc:#4479a1"></span><img src="https://cdn.simpleicons.org/mysql" alt="MySQL"><span>MySQL</span></div>
+                <div class="flip-tech"><span class="flip-dot" style="--dc:#0f7dc2"></span><img src="https://cdn.simpleicons.org/sqlite" alt="SQLite"><span>SQLite</span></div>
+                <div class="flip-tech"><span class="flip-dot" style="--dc:#3ecf8e"></span><img src="https://cdn.simpleicons.org/supabase" alt="Supabase"><span>Supabase</span></div>
+                <div class="flip-tech"><span class="flip-dot" style="--dc:#336791"></span><img src="https://cdn.simpleicons.org/postgresql" alt="PostgreSQL"><span>PostgreSQL</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Cloud & Infra ── -->
+        <div class="skill-category flip-card reveal reveal-delay-4">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <span class="skill-category-icon">☁️</span>
+              <div class="skill-category-name" data-i18n="skills.cloud">Cloud &amp; Infra</div>
+              <div class="skill-category-items">Cloudflare · Supabase · n8n · Deployment · Security · Performance</div>
+              <span class="flip-hint" data-i18n="skills.explore">↻ click to explore</span>
+            </div>
+            <div class="flip-back">
+              <div class="flip-back-title"><span>☁️</span> Cloud &amp; Infra</div>
+              <div class="flip-tech-grid">
+                <div class="flip-tech"><span class="flip-dot" style="--dc:#f6821f"></span><img src="https://cdn.simpleicons.org/cloudflare" alt="Cloudflare"><span>Cloudflare</span></div>
+                <div class="flip-tech"><span class="flip-dot" style="--dc:#3ecf8e"></span><img src="https://cdn.simpleicons.org/supabase" alt="Supabase"><span>Supabase</span></div>
+                <div class="flip-tech"><span class="flip-dot" style="--dc:#EA4B71"></span><img src="https://cdn.simpleicons.org/n8n" alt="n8n"><span>n8n</span></div>
+                <div class="flip-tech"><span class="flip-dot" style="--dc:#ffffff"></span><img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub"><span>GitHub</span></div>
+                <div class="flip-tech"><span class="flip-dot" style="--dc:#269539"></span><img src="https://cdn.simpleicons.org/nginx" alt="Nginx"><span>Nginx</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Tech Ticker -->
+    <div class="ticker-wrapper">
+      <div class="ticker-track" aria-hidden="true">
+        <!-- First set -->
+        <div class="ticker-item"><img src="https://cdn.simpleicons.org/html5" alt="HTML5" class="ticker-icon">HTML5</div>
+        <div class="ticker-item"><img src="https://cdn.simpleicons.org/css" alt="CSS3" class="ticker-icon">CSS3</div>
+        <div class="ticker-item"><img src="https://cdn.simpleicons.org/javascript" alt="JavaScript" class="ticker-icon">JavaScript</div>
+        <div class="ticker-item"><img src="https://cdn.simpleicons.org/typescript" alt="TypeScript" class="ticker-icon">TypeScript</div>
+        <div class="ticker-item"><img src="https://cdn.simpleicons.org/react" alt="React" class="ticker-icon">React</div>
+        <div class="ticker-item"><img src="https://cdn.simpleicons.org/vite" alt="Vite" class="ticker-icon">Vite</div>
+        <div class="ticker-item"><img src="https://cdn.simpleicons.org/electron" alt="Electron" class="ticker-icon">Electron</div>
+        <div class="ticker-item"><img src="https://cdn.simpleicons.org/php" alt="PHP" class="ticker-icon">PHP</div>
+        <div class="ticker-item"><img src="https://cdn.simpleicons.org/laravel" alt="Laravel" class="ticker-icon">Laravel</div>
+        <div class="ticker-item"><img src="https://cdn.simpleicons.org/mysql" alt="MySQL" class="ticker-icon">MySQL</div>
+        <div class="ticker-item"><img src="https://cdn.simpleicons.org/sqlite" alt="SQLite" class="ticker-icon">SQLite</div>
+        <div class="ticker-item"><img src="https://cdn.simpleicons.org/supabase" alt="Supabase" class="ticker-icon">Supabase</div>
+        <div class="ticker-item"><img src="https://cdn.simpleicons.org/cloudflare" alt="Cloudflare" class="ticker-icon">Cloudflare</div>
+        <div class="ticker-item"><img src="https://cdn.simpleicons.org/bootstrap" alt="Bootstrap" class="ticker-icon">Bootstrap</div>
+        <div class="ticker-item"><img src="https://cdn.simpleicons.org/mui" alt="MUI" class="ticker-icon">MUI</div>
+        <div class="ticker-item"><img src="https://cdn.simpleicons.org/tailwindcss" alt="TailwindCSS" class="ticker-icon">TailwindCSS</div>
+        <div class="ticker-item"><img src="https://cdn.simpleicons.org/wordpress" alt="WordPress" class="ticker-icon">WordPress</div>
+        <div class="ticker-item"><img src="https://cdn.simpleicons.org/shopify" alt="Shopify" class="ticker-icon">Shopify</div>
+        <!-- Duplicate for seamless loop -->
+        <div class="ticker-item"><img src="https://cdn.simpleicons.org/html5" alt="HTML5" class="ticker-icon">HTML5</div>
+        <div class="ticker-item"><img src="https://cdn.simpleicons.org/css" alt="CSS3" class="ticker-icon">CSS3</div>
+        <div class="ticker-item"><img src="https://cdn.simpleicons.org/javascript" alt="JavaScript" class="ticker-icon">JavaScript</div>
+        <div class="ticker-item"><img src="https://cdn.simpleicons.org/typescript" alt="TypeScript" class="ticker-icon">TypeScript</div>
+        <div class="ticker-item"><img src="https://cdn.simpleicons.org/react" alt="React" class="ticker-icon">React</div>
+        <div class="ticker-item"><img src="https://cdn.simpleicons.org/vite" alt="Vite" class="ticker-icon">Vite</div>
+        <div class="ticker-item"><img src="https://cdn.simpleicons.org/electron" alt="Electron" class="ticker-icon">Electron</div>
+        <div class="ticker-item"><img src="https://cdn.simpleicons.org/php" alt="PHP" class="ticker-icon">PHP</div>
+        <div class="ticker-item"><img src="https://cdn.simpleicons.org/laravel" alt="Laravel" class="ticker-icon">Laravel</div>
+        <div class="ticker-item"><img src="https://cdn.simpleicons.org/mysql" alt="MySQL" class="ticker-icon">MySQL</div>
+        <div class="ticker-item"><img src="https://cdn.simpleicons.org/sqlite" alt="SQLite" class="ticker-icon">SQLite</div>
+        <div class="ticker-item"><img src="https://cdn.simpleicons.org/supabase" alt="Supabase" class="ticker-icon">Supabase</div>
+        <div class="ticker-item"><img src="https://cdn.simpleicons.org/cloudflare" alt="Cloudflare" class="ticker-icon">Cloudflare</div>
+        <div class="ticker-item"><img src="https://cdn.simpleicons.org/bootstrap" alt="Bootstrap" class="ticker-icon">Bootstrap</div>
+        <div class="ticker-item"><img src="https://cdn.simpleicons.org/mui" alt="MUI" class="ticker-icon">MUI</div>
+        <div class="ticker-item"><img src="https://cdn.simpleicons.org/tailwindcss" alt="TailwindCSS" class="ticker-icon">TailwindCSS</div>
+        <div class="ticker-item"><img src="https://cdn.simpleicons.org/wordpress" alt="WordPress" class="ticker-icon">WordPress</div>
+        <div class="ticker-item"><img src="https://cdn.simpleicons.org/shopify" alt="Shopify" class="ticker-icon">Shopify</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ══════════════════ PROJECTS ══════════════════ -->
+  <section id="projects" class="section" aria-label="Projects">
+    <div class="container">
+      <div class="projects-header">
+        <div>
+          <p class="section-label" data-i18n="projects.label">Work</p>
+          <h2 class="section-title reveal" data-i18n="projects.title">
+            Selected <span class="gradient-text">Projects</span>
+          </h2>
+        </div>
+        <div class="projects-filters" role="group" aria-label="Project filters">
+          <button class="filter-btn active" data-filter="all" id="filter-all" data-i18n="projects.filter.all">All</button>
+          <button class="filter-btn" data-filter="web" id="filter-web" data-i18n="projects.filter.web">Web</button>
+          <button class="filter-btn" data-filter="desktop" id="filter-desktop" data-i18n="projects.filter.desktop">Desktop</button>
+          <button class="filter-btn" data-filter="system" id="filter-system" data-i18n="projects.filter.system">Systems</button>
+        </div>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- FEATURED: Web Project 1 -->
+        <div class="project-card featured reveal" data-type="web">
+          <div class="project-visual">
+            <img src="https://image.thum.io/get/width/800/crop/800/https://www.divamos.com/" alt="Divamos Preview" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; border:none; z-index:0;" loading="lazy">
+            <div class="project-visual-glow" style="background:#C8A84B; top:30%; left:40%; z-index:1; opacity:0.15;"></div>
+            <span class="project-number" style="z-index:2; background:rgba(0,0,0,0.6); backdrop-filter:blur(4px); padding:2px 8px; border-radius:4px; color:#fff;">01</span>
+            <span class="project-status status-live" style="z-index:2; backdrop-filter:blur(4px);">● Live</span>
+          </div>
+          <div class="project-body">
+            <div class="project-category" data-i18n="p1.cat">E-Commerce · Web</div>
+            <h3 class="project-title" data-i18n="p1.title">Luxury Clothing Brand Website</h3>
+            <p class="project-desc" data-i18n="p1.desc">
+              A full-featured e-commerce platform for a premium clothing brand. Built with React and
+              integrated with Shopify for seamless product management, cart, and checkout flows.
+              Features stunning product showcases, advanced filtering, and a mobile-first responsive design.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">Shopify</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">Responsive</span>
+            </div>
+            <a href="https://www.divamos.com" target="_blank" rel="noopener" class="project-link" style="margin-top:16px; display:inline-flex; align-items:center; gap:6px; color:var(--accent); font-size:13px; text-decoration:none; font-weight:600; width:fit-content; transition:transform 0.3s; padding:4px 0;">
+              Visit Site <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Web Project 2 -->
+        <div class="project-card reveal" data-type="web">
+          <div class="project-visual">
+            <img src="https://image.thum.io/get/width/800/crop/800/https://www.twf-store.com/" alt="TWF Store Preview" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; border:none; z-index:0;" loading="lazy">
+            <div class="project-visual-glow" style="background:#00E5FF; top:30%; left:40%; z-index:1; opacity:0.15;"></div>
+            <span class="project-number" style="z-index:2; background:rgba(0,0,0,0.6); backdrop-filter:blur(4px); padding:2px 8px; border-radius:4px; color:#fff;">02</span>
+            <span class="project-status status-live" style="z-index:2; backdrop-filter:blur(4px);">● Live</span>
+          </div>
+          <div class="project-body">
+            <div class="project-category" data-i18n="p2.cat">E-Commerce · Web</div>
+            <h3 class="project-title" data-i18n="p2.title">Fashion Brand Store</h3>
+            <p class="project-desc" data-i18n="p2.desc">
+              Modern fashion e-commerce site with WordPress + WooCommerce. Custom theme, advanced product
+              gallery, and optimized performance via Cloudflare.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Shopify</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">Cloudflare</span>
+            </div>
+            <a href="https://www.twf-store.com" target="_blank" rel="noopener" class="project-link" style="margin-top:16px; display:inline-flex; align-items:center; gap:6px; color:var(--accent); font-size:13px; text-decoration:none; font-weight:600; width:fit-content; transition:transform 0.3s; padding:4px 0;">
+              Visit Site <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Desktop App 1 -->
+        <div class="project-card reveal" data-type="desktop">
+          <div class="project-visual">
+            <div class="project-visual-bg">💼</div>
+            <div class="project-visual-glow" style="background:#7B61FF; top:30%; left:40%"></div>
+            <span class="project-number">03</span>
+            <span class="project-status status-desktop">● Desktop</span>
+          </div>
+          <div class="project-body">
+            <div class="project-category" data-i18n="p3.cat">Desktop App · Online</div>
+            <h3 class="project-title" data-i18n="p3.title">Business Management System</h3>
+            <p class="project-desc" data-i18n="p3.desc">
+              Full-featured online desktop application for business operations. Real-time data sync,
+              user management, and analytics dashboard. Built with Electron + Supabase.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Electron</span>
+              <span class="project-tag">Supabase</span>
+              <span class="project-tag">React</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desktop App 2 -->
+        <div class="project-card featured reveal" data-type="desktop">
+          <div class="project-visual">
+            <div class="project-visual-bg">🖥</div>
+            <div class="project-visual-glow" style="background:#C8A84B; top:30%; left:40%"></div>
+            <span class="project-number">04</span>
+            <span class="project-status status-desktop">● Desktop</span>
+          </div>
+          <div class="project-body">
+            <div class="project-category" data-i18n="p4.cat">Desktop App · Offline</div>
+            <h3 class="project-title" data-i18n="p4.title">Offline Inventory & POS System</h3>
+            <p class="project-desc" data-i18n="p4.desc">
+              A powerful offline-first Point of Sale and inventory management desktop app. Works completely
+              without internet, stores data locally with SQLite, and features receipt printing, stock alerts,
+              and detailed reporting — built for retail environments that need 100% reliability.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Electron</span>
+              <span class="project-tag">SQLite</span>
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">Offline-First</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desktop App 3 -->
+        <div class="project-card reveal" data-type="desktop">
+          <div class="project-visual">
+            <div class="project-visual-bg">📊</div>
+            <div class="project-visual-glow" style="background:#00E5FF; top:30%; left:40%"></div>
+            <span class="project-number">05</span>
+            <span class="project-status status-desktop">● Desktop</span>
+          </div>
+          <div class="project-body">
+            <div class="project-category" data-i18n="p5.cat">Desktop App · Dashboard</div>
+            <h3 class="project-title" data-i18n="p5.title">Analytics Dashboard App</h3>
+            <p class="project-desc" data-i18n="p5.desc">
+              Real-time analytics and reporting desktop application with interactive charts, data export,
+              and multi-user support. Connected to cloud databases.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Electron</span>
+              <span class="project-tag">MySQL</span>
+              <span class="project-tag">Charts</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- System 1 -->
+        <div class="project-card reveal" data-type="system">
+          <div class="project-visual">
+            <div class="project-visual-bg">⚙️</div>
+            <div class="project-visual-glow" style="background:#7B61FF; top:30%; left:40%"></div>
+            <span class="project-number">06</span>
+            <span class="project-status status-system">● System</span>
+          </div>
+          <div class="project-body">
+            <div class="project-category" data-i18n="p6.cat">System · Backend</div>
+            <h3 class="project-title" data-i18n="p6.title">HR & Payroll Management System</h3>
+            <p class="project-desc" data-i18n="p6.desc">
+              Complete HR system with employee management, attendance tracking, payroll calculation,
+              and reporting. Built with Laravel + MySQL.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Laravel</span>
+              <span class="project-tag">MySQL</span>
+              <span class="project-tag">PHP</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desktop App 4 -->
+        <div class="project-card reveal" data-type="desktop">
+          <div class="project-visual">
+            <div class="project-visual-bg">🔐</div>
+            <div class="project-visual-glow" style="background:#C8A84B; top:30%; left:40%"></div>
+            <span class="project-number">07</span>
+            <span class="project-status status-desktop">● Desktop</span>
+          </div>
+          <div class="project-body">
+            <div class="project-category" data-i18n="p7.cat">Desktop App · Security</div>
+            <h3 class="project-title" data-i18n="p7.title">Secure Document Manager</h3>
+            <p class="project-desc" data-i18n="p7.desc">
+              Offline desktop app for secure document storage, classification, and retrieval with
+              encrypted local database and advanced search capabilities.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Electron</span>
+              <span class="project-tag">SQLite</span>
+              <span class="project-tag">Encryption</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- System 2 -->
+        <div class="project-card featured reveal" data-type="system">
+          <div class="project-visual">
+            <div class="project-visual-bg">🌐</div>
+            <div class="project-visual-glow" style="background:#00E5FF; top:30%; left:40%"></div>
+            <span class="project-number">08</span>
+            <span class="project-status status-system">● System</span>
+          </div>
+          <div class="project-body">
+            <div class="project-category" data-i18n="p8.cat">System · Full-Stack</div>
+            <h3 class="project-title" data-i18n="p8.title">Multi-Tenant SaaS Platform</h3>
+            <p class="project-desc" data-i18n="p8.desc">
+              A scalable multi-tenant platform with role-based access control, subscription management,
+              and real-time collaboration features. Hosted on Cloudflare with Supabase backend —
+              architected for thousands of concurrent users.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Laravel</span>
+              <span class="project-tag">Supabase</span>
+              <span class="project-tag">React</span>
+              <span class="project-tag">Cloudflare</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desktop App 5 -->
+        <div class="project-card reveal" data-type="desktop">
+          <div class="project-visual">
+            <div class="project-visual-bg">🎯</div>
+            <div class="project-visual-glow" style="background:#7B61FF; top:30%; left:40%"></div>
+            <span class="project-number">09</span>
+            <span class="project-status status-desktop">● Desktop</span>
+          </div>
+          <div class="project-body">
+            <div class="project-category" data-i18n="p9.cat">Desktop App · Productivity</div>
+            <h3 class="project-title" data-i18n="p9.title">Task & Project Tracker</h3>
+            <p class="project-desc" data-i18n="p9.desc">
+              Fully offline productivity desktop app with kanban boards, time tracking, and team
+              collaboration — all stored locally with zero latency.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Electron</span>
+              <span class="project-tag">SQLite</span>
+              <span class="project-tag">Vite</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ══════════════════ SERVICES ══════════════════ -->
+  <section id="services" class="section" aria-label="Services">
+    <div class="container">
+      <div class="services-header">
+        <p class="section-label reveal" style="justify-content:center" data-i18n="services.label">What I Do</p>
+        <h2 class="section-title reveal" data-i18n="services.title">
+          Services Built for <span class="gradient-text">Real Impact</span>
+        </h2>
+        <p class="section-subtitle reveal" data-i18n="services.subtitle">
+          From concept to deployment — I deliver complete, production-ready solutions
+          with uncompromising quality at every layer.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-icon">🌐</div>
+          <h3 class="service-title" data-i18n="s1.title">Web Development</h3>
+          <p class="service-desc" data-i18n="s1.desc">Full-stack web applications, from marketing sites to complex web platforms — fast, accessible, and built to convert.</p>
+          <ul class="service-features">
+            <li data-i18n="s1.f1">React &amp; Vite SPAs</li>
+            <li data-i18n="s1.f2">Laravel APIs &amp; backends</li>
+            <li data-i18n="s1.f3">E-commerce (Shopify/WP)</li>
+            <li data-i18n="s1.f4">Performance optimization</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-icon">🖥</div>
+          <h3 class="service-title" data-i18n="s2.title">Desktop Applications</h3>
+          <p class="service-desc" data-i18n="s2.desc">Cross-platform desktop apps that run online or completely offline — built with Electron for a native feel.</p>
+          <ul class="service-features">
+            <li data-i18n="s2.f1">Online &amp; offline-first apps</li>
+            <li data-i18n="s2.f2">Custom POS systems</li>
+            <li data-i18n="s2.f3">Management dashboards</li>
+            <li data-i18n="s2.f4">Auto-updates &amp; packaging</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal reveal-delay-3">
+          <div class="service-icon">🛒</div>
+          <h3 class="service-title" data-i18n="s3.title">E-Commerce Solutions</h3>
+          <p class="service-desc" data-i18n="s3.desc">Complete online stores that sell — built on Shopify, WooCommerce, or custom stacks with full payment integration.</p>
+          <ul class="service-features">
+            <li data-i18n="s3.f1">Shopify &amp; WordPress stores</li>
+            <li data-i18n="s3.f2">Custom product pages</li>
+            <li data-i18n="s3.f3">Payment gateways</li>
+            <li data-i18n="s3.f4">Admin dashboards</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal reveal-delay-4">
+          <div class="service-icon">⚙️</div>
+          <h3 class="service-title" data-i18n="s4.title">Systems &amp; APIs</h3>
+          <p class="service-desc" data-i18n="s4.desc">Scalable backend systems, HR &amp; payroll platforms, multi-tenant SaaS, and custom business logic engines.</p>
+          <ul class="service-features">
+            <li data-i18n="s4.f1">RESTful APIs</li>
+            <li data-i18n="s4.f2">Multi-tenant architecture</li>
+            <li data-i18n="s4.f3">Database design</li>
+            <li data-i18n="s4.f4">Cloudflare &amp; Supabase</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ══════════════════ CONTACT ══════════════════ -->
+  <section id="contact" class="section" aria-label="Contact Ahmed Khaled">
+    <div class="container">
+      <div class="contact-wrapper">
+
+        <div class="contact-info">
+          <p class="section-label" data-i18n="contact.label">Get In Touch</p>
+          <h2 class="section-title reveal" data-i18n="contact.title">
+            Let's Build Something <span class="gradient-text">Extraordinary</span>
+          </h2>
+          <p class="contact-tagline reveal" data-i18n="contact.tagline">
+            Whether you need a premium website, a desktop application, or a full software system —
+            I'm ready to turn your vision into reality. Let's talk.
+          </p>
+
+          <div class="contact-items">
+            <a href="mailto:ahmedkhaled@example.com" class="contact-item reveal reveal-delay-1" id="contact-email">
+              <div class="contact-item-icon">📧</div>
+              <div>
+                <div class="contact-item-label" data-i18n="contact.email">Email</div>
+                <div class="contact-item-value">ahmedkhaled@example.com</div>
+              </div>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener" class="contact-item reveal reveal-delay-2" id="contact-github">
+              <div class="contact-item-icon">🐙</div>
+              <div>
+                <div class="contact-item-label">GitHub</div>
+                <div class="contact-item-value">github.com/ahmedkhaled</div>
+              </div>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="contact-item reveal reveal-delay-3" id="contact-linkedin">
+              <div class="contact-item-icon">💼</div>
+              <div>
+                <div class="contact-item-label">LinkedIn</div>
+                <div class="contact-item-value">linkedin.com/in/ahmedkhaled</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="form-name" data-i18n="contact.form.name">Your Name</label>
+              <input type="text" id="form-name" name="name" class="form-input" data-i18n-placeholder="contact.form.name_ph" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label for="form-email" data-i18n="contact.form.email">Email Address</label>
+              <input type="email" id="form-email" name="email" class="form-input" data-i18n-placeholder="contact.form.email_ph" placeholder="john@example.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="form-subject" data-i18n="contact.form.subject">Subject</label>
+            <input type="text" id="form-subject" name="subject" class="form-input" data-i18n-placeholder="contact.form.subject_ph" placeholder="Project Inquiry" />
+          </div>
+          <div class="form-group">
+            <label for="form-message" data-i18n="contact.form.message">Message</label>
+            <textarea id="form-message" name="message" class="form-textarea" data-i18n-placeholder="contact.form.message_ph" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-submit" id="contact-submit">
+            <span data-i18n="contact.form.submit">Send Message</span>
+            <span class="btn-icon">→</span>
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ FOOTER ══════════════════ -->
+  <footer id="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="#hero" class="footer-logo" aria-label="Ahmed Khaled">
+          <img src="assets/Picsart_25-03-30_03-19-04-077.png" alt="AK Logo" style="height:26px;filter:invert(1) drop-shadow(0 0 4px rgba(79, 195, 247, 1)) drop-shadow(0 0 10px rgba(79, 195, 247, 0.85))" />
+        </a>
+        <p class="footer-copy" data-i18n="footer.copy">
+          © 2024 <span>Ahmed Khaled</span> · Built with precision &amp; passion
+        </p>
+        <div class="footer-socials">
+          <a href="https://github.com" target="_blank" rel="noopener" class="social-link" aria-label="GitHub" id="footer-github">🐙</a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn" id="footer-linkedin">💼</a>
+          <a href="mailto:ahmedkhaled@example.com" class="social-link" aria-label="Email" id="footer-email">📧</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
